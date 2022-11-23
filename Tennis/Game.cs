@@ -2,13 +2,6 @@
 
 namespace Tennis
 {
-    public class Score
-    {
-        public string Text { get; set; }
-
-        public bool GameIsFinished { get; set; }
-    }
-
     public class Game
     {
         private readonly List<StateType> _players = new List<StateType>() {StateType.Love, StateType.Love};
@@ -61,17 +54,5 @@ namespace Tennis
                        _players[otherPlayerIndex] != StateType.Advantage
                    );
         }
-
-        // ReSharper disable UnusedMember.Local
-        private enum StateType
-        {
-            Love,
-            Fifteen,
-            Thirty,
-            Forty,
-            Advantage,
-            Wins
-        }
-        // ReSharper restore UnusedMember.Local
     }
 }
